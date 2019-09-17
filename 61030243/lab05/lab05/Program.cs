@@ -10,31 +10,56 @@ namespace lab05
     {
         static void Main(string[] args)
         {
-            Console.Write("Input your grade (A, B, C, D or F) : ");
-            string gradeString = Console.ReadLine();
-            string message;
-            switch (gradeString.ToUpper())
+            string day = null;
+            string color = null ;
+
+            Console.Write("Input day name : ");
+            string name = Console.ReadLine();
+
+            switch (name.ToLower())
             {
-                case "A":
-                    message = "Excellent";
+                case "sun":
+                    day = "Sunday";
+                    color = "Red";
                     break;
-                case "B":
-                    message = "Good";
+
+                case "mon":
+                    day = "Monday";
+                    color = "Yellow";
                     break;
-                case "C":
-                    message = "Cool";
+
+                case "tue":
+                    day = "Tuesday";
+                    color = "Pink";
                     break;
-                case "D":
-                    message = "Try";
+
+                case "wed":
+                    day = "Wednesday";
+                    color = "Green";
                     break;
-                case "F":
-                    message = "Get out!!";
+
+                case "thu":
+                    day = "Thursday";
+                    color = "Orange";
                     break;
-                default:
-                    message = "Incorrect grade";
+
+                case "fri":
+                    day = "Friday";
+                    color = "Blue";
                     break;
+
+                case "sat":
+                    day = "Saturday";
+                    color = "Purple";
+                    break;
+
+                defult:
+                    day = color = "Invalid";
+                    break;
+
             }
-            Console.WriteLine(message);
+
+            Console.WriteLine("{0} is {1}, color {2}", name, day, color);
         }
     }
 }
